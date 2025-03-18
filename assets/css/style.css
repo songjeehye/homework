@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* "box-sizing" 속성 2가지
+    1. content-box' : 기본값으로 padding 및 border 추가 시, 지정한 box 사이즈에 추가되어 해당 box 사이즈 또한 그만큼 커지게 된다.
+    2. border-box' : padding 및 border 추가하여도 지정한 box 사이즈에 맞추어 적용된다. */ 
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*
+    min-width/height : 요소의 최소 가로/세로 크기 지정
+    max-width/height : 요소의 최대 가로/세로 크기 지정
+    */
+    background: url('../image/img.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper{
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    /*
+    'input'이 아닌 'input-box'에 border 설정하여 'input'의 padding 대신 width 값으로 text 길이 조절
+    [추가 부분]
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    */
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    /* background: transparent = 배경 투명 */
+    border: none;
+    outline: none;
+    /* "border"
+    - 크기와 위치가 요소의 레이아웃 크기 및 정렬에 영향을 준다.
+    - 활용 범위 : 박스/카드 레이아웃이나 이미지 갤러리에서 각 요소를 구분하는데 활용
+    "outline"
+    - 크기와 위치가 요소의 레이아웃 크기 및 정렬에 영향을 주지 않는다.
+    - 활용 범위 : 현재 활성화되거나 focus 상태를 시각적으로 표시하려는 경우 활용 (반응형) */
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+    /*수정 부분 padding-left: 20px;*/
+}
+
+.input-box input::placeholder{
+    color: #fff;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input{
+    /* ".remember-forgot>label>input" 또는 ".remember-forgot input" */
+    accent-color: #fff;
+    /* "accent-color" 강조 색상 지정
+    - 사용 가능 범위 : type(radio, checkbox, range), tag (progress) */
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #fff;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer
+}
+
+.wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a{
+    /* ".register-link>p>a" 또는 ".register-link a"*/
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-link p a:hover{
+    /* ".register-link>p>a" 또는 ".register-link a"*/
+    text-decoration: underline;
+}
